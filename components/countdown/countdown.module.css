@@ -1,0 +1,22 @@
+@keyframes countdown-animation {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        /*transform: scale(1.2);*/
+        color: white;
+        text-shadow: 1px 4px #C09460
+    }
+    70% {
+        /*transform: scale(1.2);*/
+        color: white;
+        text-shadow: 5px 4px #193D5A
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.countdownAnimation {
+    animation: countdown-animation 10s ease-in-out infinite;
+}
