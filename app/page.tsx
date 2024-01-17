@@ -5,6 +5,8 @@ import Image from "next/image";
 import {useState} from "react";
 import SlideText from "@/components/slide-text/slide";
 
+import styles from './page.module.css'
+
 export default function Home({ searchParams: { minutos = 10, segundos = 0 } }: { searchParams: { minutos: number, segundos: number } }) {
   const [start, setStart] = useState(false)
   const [hideFooter, setHideFooter] = useState(false)
@@ -50,7 +52,7 @@ export default function Home({ searchParams: { minutos = 10, segundos = 0 } }: {
                   </>
                 ),
                 (
-                  <div key="last" className="w-screen h-screen relative" onLoad={() => setHideFooter(true)}>
+                  <div key="last" className={`${styles.pulseAnimation} w-screen h-screen relative`} onLoad={() => setHideFooter(true)}>
                     <Image src="/assets/images/sal-da-terra.png" alt="sal-da-terra" fill
                            style={{objectFit: 'contain', width: '100%', height: '100%'}}/>
                   </div>
@@ -61,7 +63,7 @@ export default function Home({ searchParams: { minutos = 10, segundos = 0 } }: {
         }
         {
           !hideFooter && (
-            <div className="w-[30vw] h-[20vh] absolute bottom-0">
+            <div className={`${styles.pulseAnimation} w-[30vw] h-[20vh] absolute bottom-0`}>
               <Image src="/assets/images/sal-da-terra.png" alt="sal-da-terra" fill
                      style={{objectFit: 'contain', width: '100%', height: '100%'}}/>
             </div>
