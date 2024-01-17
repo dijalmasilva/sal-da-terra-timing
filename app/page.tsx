@@ -39,9 +39,9 @@ export default function Home({ searchParams: { minutos = 10, segundos = 0 } }: {
                 ),
                 (
                   <>
-                    {`Bem vindo à igreja`}
+                    {`Bem-vindo à igreja`}
                     <br/>
-                    Sal da Terra
+                    {`Sal da Terra`}
                   </>
                 ),
                 (
